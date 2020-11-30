@@ -1,16 +1,4 @@
-// FUNCTIONS IMPLEMENTATION
-const eqArrays = function(firstArray, secondArray) {
-  if (JSON.stringify(firstArray) === JSON.stringify(secondArray)) return true;
-  else return false;
-};
-
-const assertArraysEqual = function(firstArray, secondArray) {
-  if (eqArrays(firstArray, secondArray)) {
-    console.log(`🎉🎉🎉Assertion Passed: ${firstArray} === ${secondArray}`);
-  } else {
-    console.log(`⛔⛔⛔Assertion Failed: ${firstArray} !== ${secondArray}`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 // ACTUAL FUNCTION
 const middle = function(array) {
@@ -21,8 +9,4 @@ const middle = function(array) {
   return [array[middleSecond]];
 };
 
-assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-assertArraysEqual(middle([1]), [1]);
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle(["1", "2", "3"]), ["2"]);
+module.exports = middle;
