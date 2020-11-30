@@ -8,6 +8,7 @@ const eqObjects = require('./eqObjects');
 const assertObjectsEqual = require('./assertObjectsEqual');
 const countLetters = require('./countLetters');
 const countOnly = require('./countOnly');
+const letterPositions = require('./letterPositions');
 
 module.exports = {
   head:   head,
@@ -19,5 +20,6 @@ module.exports = {
   eqObjects: eqObjects,
   assertObjectsEqual: assertObjectsEqual,
   countLetters: countLetters,
-  countOnly: countOnly
+  countOnly: countOnly,
+  letterPositions: letterPositions
 };
