@@ -1,17 +1,3 @@
-// FUNCTIONS IMPLEMENTATION
-const eqArrays = function(firstArray, secondArray) {
-  if (JSON.stringify(firstArray) === JSON.stringify(secondArray)) return true;
-  else return false;
-};
-
-const assertArraysEqual = function(firstArray, secondArray) {
-  if (eqArrays(firstArray, secondArray)) {
-    console.log(`🎉🎉🎉Assertion Passed: ${firstArray} === ${secondArray}`);
-  } else {
-    console.log(`⛔⛔⛔Assertion Failed: ${firstArray} !== ${secondArray}`);
-  }
-};
-
 const flatten = function(array) {
   let newArray = [];
   for (const index in array) {
@@ -23,7 +9,7 @@ const flatten = function(array) {
       newArray.push(array[index]);
     }
   }
-  console.log(newArray);
+  return newArray;
 };
 
-flatten([1, 2, [3, 4], 5, [6]]) ;
+module.exports = flatten;
