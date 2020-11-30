@@ -1,5 +1,12 @@
 const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 
-// TEST CODE
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(1, 2);
+describe("#assertEqual", () => {
+  it("returns Bootcamp for Bootcamp", () => {
+    assert.strictEqual(assertEqual("Bootcamp", "Bootcamp"));
+  });
+
+  it("returns 2 for 2", () => {
+    assert.strictEqual(assertEqual(2, 2));
+  });
+});
