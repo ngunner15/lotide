@@ -1,8 +1,4 @@
-// FUNCTIONS IMPLEMENTATION
-const eqArrays = function(firstArray, secondArray) {
-  if (JSON.stringify(firstArray) === JSON.stringify(secondArray)) return true;
-  else return false;
-};
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = function(firstArray, secondArray) {
   if (eqArrays(firstArray, secondArray)) {
@@ -11,3 +7,5 @@ const assertArraysEqual = function(firstArray, secondArray) {
     console.log(`⛔⛔⛔Assertion Failed: ${firstArray} !== ${secondArray}`);
   }
 };
+
+module.exports = assertArraysEqual;
